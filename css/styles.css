@@ -19,6 +19,7 @@
 :root {
   --black: #282828;
   --white: #f2f2f2;
+  --overlay: #00000080;
 }
 
 *, *::before, *::after {
@@ -99,9 +100,7 @@ a {
   font-size: 0;
 }
 
-.list-container {
-  display: flex;
-  flex-direction: column;
+.list-right, .list-left {
   list-style: none;
   padding-left: 0;
   font-family: NeueMontreal, sans-serif;
@@ -109,10 +108,17 @@ a {
   font-weight: 300;
 }
 
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 1rem;
+}
+
 .episode-list {
   font-family: NeueMontreal, sans-serif;
   font-weight: 300;
   color: var(--white);
+  text-decoration: underline;
 }
 
 h1 {
@@ -127,7 +133,7 @@ h1 {
 
 .sq-text {
   padding: 2rem 1rem 0 1rem;
-  background-color: #00000030;
+  background-color: var(--overlay);
   z-index: 10;
   height: 100%;
   visibility: hidden;
