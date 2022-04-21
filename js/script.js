@@ -6,6 +6,8 @@ const menuIcon = document.querySelector('.menuIcon');
 
 const linksDropDown = document.querySelector('.links-dropdown');
 const links = document.querySelector('.links');
+const addIcon = document.querySelector('.add');
+const removeIcon = document.querySelector('.remove');
 
 
 function toggleMenu() {
@@ -13,6 +15,9 @@ function toggleMenu() {
 		menu.classList.remove('show-menu');
 		closeIcon.style.display = 'none';
 		menuIcon.style.display = 'block';
+		links.classList.remove('show-links');
+		addIcon.style.display = 'block';
+		removeIcon.style.display = 'none';
 	} else {
 		menu.classList.add('show-menu');
 		closeIcon.style.display = 'block';
@@ -23,8 +28,12 @@ function toggleMenu() {
 function toggleLinks() {
 	if (links.classList.contains('show-links')) {
 		links.classList.remove('show-links');
+		addIcon.style.display = 'block';
+		removeIcon.style.display = 'none';
 	} else {
 		links.classList.add('show-links');
+		addIcon.style.display = 'none';
+		removeIcon.style.display = 'block';
 	}
 }
 

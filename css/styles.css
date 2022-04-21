@@ -94,7 +94,7 @@ h1 {
   list-style: none;
   position: fixed;
   margin: 0;
-  padding: 3rem;
+  padding: 3rem 1rem 3rem 3rem;
   top: 0;
   left: 3rem;
   right: 0;
@@ -108,7 +108,7 @@ h1 {
 }
 
 .menu > li {
-  padding: 1rem;
+  padding: 0.6rem;
 }
 
 .menu-link {
@@ -136,9 +136,9 @@ h1 {
   border: none;
 }
 
-.material-icons:hover {
+/*.material-icons:hover {
   color: var(--pink);
-}
+}*/
 
 .material-icons {
   color: var(--white);
@@ -146,6 +146,10 @@ h1 {
 }
 
 .closeIcon {
+  display: none;
+}
+
+.remove {
   display: none;
 }
 
@@ -163,16 +167,23 @@ h1 {
 }
 
 .links {
-  display: none;
+  transform: translateX(105%);
   transition: 0.3s;
   z-index: 101;
   list-style: none;
   position: fixed;
-  top: 200px;
+  top: 185px;
+  left: 75px;
+  right: 0;
+  bottom: 0;
+}
+
+.links > li {
+  padding: 0.6rem 0;
 }
 
 .show-links {
-  display: block;
+  transform: translateX(0);
 }
 
 .links-dropdown {
@@ -181,7 +192,12 @@ h1 {
   align-items: center;
 }
 
-.links-dropdown:hover .downIcon {
+.links-dropdown:hover .add,
+.links-dropdown:hover .remove {
+  color: var(--pink);
+}
+
+.material-icons:hover {
   color: var(--pink);
 }
 
