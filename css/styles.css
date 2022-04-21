@@ -124,6 +124,10 @@ h1 {
   color: var(--pink);
 }
 
+.horizontal-menu {
+  display: none;
+}
+
 .hamburger {
   position: fixed;
   z-index: 99;
@@ -135,10 +139,6 @@ h1 {
   background-color: transparent;
   border: none;
 }
-
-/*.material-icons:hover {
-  color: var(--pink);
-}*/
 
 .material-icons {
   color: var(--white);
@@ -159,6 +159,18 @@ h1 {
   padding: 0 1rem 1rem 1rem;
 }
 
+.about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.about-container > h1 {
+  padding: 0;
+  margin: 1.2rem 0;
+}
+
+
 .grid-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -173,7 +185,7 @@ h1 {
   list-style: none;
   position: fixed;
   top: 185px;
-  left: 75px;
+  left: 5rem;
   right: 0;
   bottom: 0;
 }
@@ -413,7 +425,7 @@ p a:hover {
   color: var(--pink);
 }
 
-@media only screen and (min-width: 500px){
+@media only screen and (min-width: 500px) {  
 
   .logo-text {
     font-size: 2.2rem;
@@ -424,49 +436,72 @@ p a:hover {
     width: 100px;
   }
 
-  .menu-link {
-    font-size: 20px;
-  }
-
   .sq-text {
     padding: 0 20px;
   }
 
+  .hamburger {
+    top: 34.5px;
+    right: 34.5;
+  }
+
+  .menu {
+  left: 6rem;
+  }
+
+  .links {
+    left: 8rem;
+  }
+
 }
 
-@media only screen and (min-width: 650px){
+@media only screen and (min-width: 650px) {
   
-  .logo-container {
-    padding-left: 0.5rem;
-    gap: 0.5rem;
-  }
+    .logo-container {
+      padding-left: 0.5rem;
+      gap: 0.5rem;
+    }
 
-  .sq-text {
-    padding: 0 24px;
+    .sq-text {
+      padding: 0 24px;
+    }
+
+    .list-container {
+      grid-template-columns: 8fr 1fr 8fr;
+    }
+
+    .list-left {
+      grid-column: 1 / 2;
+    }
+
+    .vertical-line {
+      display: block;
+      grid-column: 2 / 3;
+    }
+
+    .list-right {
+      grid-column: 3 / 4;
+    }
+
+    .horizontal-menu {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      column-gap: 0.5rem;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
 }
 
-  .list-container {
-    grid-template-columns: 8fr 1fr 8fr;
-  }
-
-  .list-left {
-    grid-column: 1 / 2;
-  }
-
-  .vertical-line {
-    display: block;
-    grid-column: 2 / 3;
-  }
-
-  .list-right {
-    grid-column: 3 / 4;
-  }
-
-@media only screen and (min-width: 952px){
+@media only screen and (min-width: 952px) {
 
   .main-container {
     width: 952px;
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
   }
 
   .sq-text {
