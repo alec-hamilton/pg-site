@@ -6,28 +6,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>pleasure gallery</title>
   <link href="css/normalize.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="css/styles.css" rel="stylesheet">
+  <script src="js/script.js" defer></script>
 </head>
 
 <body>
   
   <nav>
     <div class="top-nav">
-      <div class="logo-container">
-        <img class="logo-image" id="top"src="images/logo-94x94.png" alt="japanese wooden block lotus flower">
-        <div class="logo-text">
-          pleasure<br>gallery
+      <a href="index.html">
+        <div class="logo-container">
+          <img class="logo-image" id="top" src="images/logo-94x94.png" alt="japanese wooden block lotus flower">
+          <div class="logo-text">
+            pleasure<br>gallery
+          </div>
         </div>
-      </div>
-      <div class="menu">
-        <a class="menu-link" href="#about">about</a>
-        <a class="menu-link" href="#">links</a>
-      </div>
+      </a>
+      <ul class="menu">
+        <li><a class="menu-link" href="index.html">home</a></li>
+        <li><a class="menu-link" href="about.html">about</a></li>
+        <li>
+          <a class="menu-link links-dropdown" href="#">links<i class="downIcon material-icons">expand_more</i></a>
+        <li>
+      </ul>
+      <ul class="links">
+        <li><a class="menu-link" href="https://soundcloud.com/pleasuregallery" target="_blank">soundcloud</a></li>
+        <li><a class="menu-link" href="https://www.instagram.com/pleasure__gallery/" target="_blank">instagram</a></li>
+        <li><a class="menu-link" href="https://www.facebook.com/pleasure-gallery-102562368901659" target="_blank">facebook</a></li>
+      </ul>
+      <button class="hamburger">
+         <i class="menuIcon material-icons">menu</i>
+         <i class="closeIcon material-icons">close</i>
+      </button>
     </div>
   </nav>
 
   <section>
-    <div class="main-container">
+    <div class="main-container top-container">
       <h1>season 2</h1>
       <div class="grid-container">
         <img src="images/s2e1.png" alt="" class="e1">
@@ -276,15 +292,6 @@
     </div>
   </section>
 
-  <section>
-    <div class="main-container">
-      <h1 id="about">about</h1>
-      <p>Pleasure gallery is a mix series, radio show and event promotor based in Bristol and founded by Alec Hamilton.</p>
-      <p>Born out of a love for the unique relationship between music and art, pleasure gallery mixes exist within 12 episode seasons. Each season has its own piece of artwork made for it and each mix reveals 1/12th of the whole picture. When a season finishes, the artwork is uncovered in full.</p>
-      <p>For all enquiries please email <a href="mailto:alec@pleasuregallery.net">alec@pleasuregallery.net</a></p>
-    </div>
-  </section>
-
   <footer>
     <ul class="footer-links">
       <li><a href="https://soundcloud.com/pleasuregallery" target="_blank">soundcloud</a>&nbsp;/&nbsp;</li>
@@ -293,8 +300,6 @@
     </ul>
     <a href="#top"><img src="images/pg-vector-white.svg" alt="" class="logo-white"></a>
   </footer>
-
-
 
 </body>
 

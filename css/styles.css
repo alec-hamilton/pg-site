@@ -47,11 +47,23 @@ hr {
   width: 100%;
 }
 
+h1 {
+  padding: 0;
+  margin: 1.2rem 0.4rem;
+}
+
+.top-container {
+  margin-top: 95.2px;
+}
+
 .top-nav {
   display: flex;
   justify-content: space-between;
   background-color: var(--black);
   border-bottom: 1px solid var(--white);
+  position: fixed;
+  width: 100%;
+  top: 0;
 }
 
 .logo-container {
@@ -77,16 +89,32 @@ hr {
 }
 
 .menu {
-  display: flex;
-  gap: 3vw;
-  align-items: center;
-  padding-right: 2vw;
+  transform: translateX(100%);
+  transition: 0.2s;
+  list-style: none;
+  position: fixed;
+  margin: 0;
+  padding: 3rem;
+  top: 0;
+  left: 3rem;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black);
+}
+
+.show-menu {
+  transform: translateX(0);
+  z-index: 5;
+}
+
+.menu > li {
+  padding: 1rem;
 }
 
 .menu-link {
   font-family: NeueMontreal, sans-serif;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 1.6rem;
   color: var(--white);
   text-decoration: none;
   transition: 0.3s;
@@ -96,10 +124,35 @@ hr {
   color: var(--pink);
 }
 
+.hamburger {
+  position: fixed;
+  z-index: 99;
+  top: 22px;
+  right: 22px;
+  padding: 4px;
+  cursor: pointer;
+  color: var(--white);
+  background-color: transparent;
+  border: none;
+}
+
+.material-icons:hover {
+  color: var(--pink);
+}
+
+.material-icons {
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.closeIcon {
+  display: none;
+}
+
 .main-container {
   display: flex;
   flex-direction: column;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
 }
 
 .grid-container {
@@ -107,6 +160,29 @@ hr {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 0;
   font-size: 0;
+}
+
+.links {
+  display: none;
+  transition: 0.3s;
+  z-index: 101;
+  list-style: none;
+  position: fixed;
+  top: 200px;
+}
+
+.show-links {
+  display: block;
+}
+
+.links-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links-dropdown:hover .downIcon {
+  color: var(--pink);
 }
 
 .list-left,
