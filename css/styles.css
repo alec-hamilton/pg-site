@@ -85,7 +85,6 @@ h1 {
   aspect-ratio: 1;
   height: 75px;
   width: 75px;
-
 }
 
 .menu {
@@ -126,6 +125,7 @@ h1 {
 
 .horizontal-menu {
   display: none;
+  margin-right: 2rem;
 }
 
 .hamburger {
@@ -169,7 +169,6 @@ h1 {
   padding: 0;
   margin: 1.2rem 0;
 }
-
 
 .grid-container {
   display: grid;
@@ -487,7 +486,7 @@ p a:hover {
       display: flex;
       list-style: none;
       align-items: center;
-      column-gap: 0.5rem;
+      column-gap: 2rem;
     }
 
     .hamburger {
@@ -502,6 +501,13 @@ p a:hover {
     width: 952px;
     margin-right: auto;
     margin-left: auto;
+  }
+
+  .about-container {
+    width: 952px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
   }
 
   .sq-text {
