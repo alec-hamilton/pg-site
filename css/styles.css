@@ -1,12 +1,526 @@
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('fonts/NeueMontreal.otf');
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('fonts/NeueMontreal-Bold.otf');
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'NeueMontreal';
+  src: url('fonts/NeueMontreal-Light.otf');
+  font-weight: 300;
+}
+
+:root {
+  --black: #282828;
+  --white: #f2f2f2;
+  --overlay: #00000080;
+  --pink: #ff8fa0;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   padding: 0;
+  background-color: var(--black);
+  margin: 0;
 }
 
 img {
   width: 100%;
   height: auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+hr {
+  border-top: 0px solid var(--white);
+  width: 100%;
+}
+
+h1 {
+  padding: 0;
+  margin: 1.2rem 0.4rem;
+}
+
+.top-container {
+  margin-top: 95.2px;
+}
+
+.top-nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--black);
+  border-bottom: 1px solid var(--white);
+  position: fixed;
+  width: 100%;
+  top: 0;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-text {
+  font-family: NeueMontreal, sans-serif;
+  font-size: 1.8rem;
+  font-weight: 400;
+  color: var(--white);
+  line-height: 1;
+}
+
+.logo-image {
+  align-items: center;
+  padding: 3px;
+  aspect-ratio: 1;
+  height: 75px;
+  width: 75px;
+}
+
+.menu {
+  transform: translateX(100%);
+  transition: 0.2s;
+  list-style: none;
+  position: fixed;
+  margin: 0;
+  padding: 3rem 1rem 3rem 3rem;
+  top: 0;
+  left: 3rem;
+  right: 0;
+  bottom: 0;
+  background-color: var(--black);
+}
+
+.show-menu {
+  transform: translateX(0);
+  z-index: 5;
+}
+
+.menu > li {
+  padding: 0.6rem;
+}
+
+.menu-link {
+  font-family: NeueMontreal, sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: var(--white);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.menu-link:hover {
+  color: var(--pink);
+}
+
+.horizontal-menu {
+  display: none;
+  margin-right: 2rem;
+}
+
+.hamburger {
+  position: fixed;
+  z-index: 99;
+  top: 22px;
+  right: 22px;
+  padding: 4px;
+  cursor: pointer;
+  color: var(--white);
+  background-color: transparent;
+  border: none;
+}
+
+.material-icons {
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.closeIcon {
+  display: none;
+}
+
+.remove {
+  display: none;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1rem 1rem 1rem;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+}
+
+.about-container > h1 {
+  padding: 0;
+  margin: 1.2rem 0;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 0;
+  font-size: 0;
+}
+
+.links {
+  transform: translateX(105%);
+  transition: 0.3s;
+  z-index: 101;
+  list-style: none;
+  position: fixed;
+  top: 185px;
+  left: 5rem;
+  right: 0;
+  bottom: 0;
+}
+
+.links > li {
+  padding: 0.6rem 0;
+}
+
+.show-links {
+  transform: translateX(0);
+}
+
+.links-dropdown {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.links-dropdown:hover .add,
+.links-dropdown:hover .remove {
+  color: var(--pink);
+}
+
+.material-icons:hover {
+  color: var(--pink);
+}
+
+.list-left,
+.list-right {
+  list-style: none;
+  padding-left: 0;
+  font-family: NeueMontreal, sans-serif;
+  color: var(--white);
+  font-weight: 300;
+  margin: 0;
+}
+
+.list-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  padding: 1rem;
+}
+
+.episode-list {
+  font-family: NeueMontreal, sans-serif;
+  font-weight: 300;
+  color: var(--white);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.episode-list:hover {
+  color: var(--pink);
+}
+
+.vertical-line {
+  border-left: 1px solid var(--white);
+  grid-column: 2 / span 1;
+  justify-self: center;
+  display: none;
+}
+
+h1 {
+  font-family: NeueMontreal, sans-serif;
+  color: var(--white);
+  font-weight: 500;
+}
+
+.img-sq {
+  aspect-ratio: 1;
+}
+
+.sq-text {
+  padding: 0 10px;
+  background-color: var(--overlay);
+  z-index: 10;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  visibility: hidden;
+}
+
+.sq-text h2 {
+  font-family: NeueMontreal, sans-serif;
+  color: var(--white);
+  font-weight: 500;
+  font-size: 2.5vw;
+  padding-top: 5px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.sq-text h3 {
+  font-family: NeueMontreal, sans-serif;
+  color: var(--white);
+  font-weight: 300;
+  font-size: 2vw;
+  padding: 0;
+  margin: 0;
+}
+
+.e1:hover > div {
+  visibility: visible;
+}
+
+.e2:hover > div {
+  visibility: visible;
+}
+
+.e3:hover > div {
+  visibility: visible;
+}
+
+.e4:hover > div {
+  visibility: visible;
+}
+
+.e5:hover > div {
+  visibility: visible;
+}
+
+.e6:hover > div {
+  visibility: visible;
+}
+
+.e7:hover > div {
+  visibility: visible;
+}
+
+.e8:hover > div {
+  visibility: visible;
+}
+
+.e9:hover > div {
+  visibility: visible;
+}
+
+.e10:hover > div {
+  visibility: visible;
+}
+
+.e11:hover > div {
+  visibility: visible;
+}
+
+.e12:hover > div {
+  visibility: visible;
+}
+
+.e1 {
+  grid-area: 3 / 4 / span 1 / span 1;
+}
+
+.e2 {
+  grid-area: 3 / 3 / span 1 / span 1;
+}
+
+.e3 {
+  grid-area: 3 / 2 / span 1 / span 1;
+}
+
+.e4 {
+  grid-area: 3 / 1 / span 1 / span 1;
+}
+
+.e5 {
+  grid-area: 2 / 4 / span 1 / span 1;
+}
+
+.e6 {
+  grid-area: 2 / 3 / span 1 / span 1;
+}
+
+.e7 {
+  grid-area: 2 / 2 / span 1 / span 1;
+}
+
+.e8 {
+  grid-area: 2 / 1 / span 1 / span 1;
+}
+
+.e9 {
+  grid-area: 1 / 4 / span 1 / span 1;
+}
+
+.e10 {
+  grid-area: 1 / 3 / span 1 / span 1;
+}
+
+.e11 {
+  grid-area: 1 / 2 / span 1 / span 1;
+}
+
+.e12 {
+  grid-area: 1 / 1 / span 1 / span 1;
+}
+
+p {
+  font-family: NeueMontreal, sans-serif;
+  color: var(--white);
+  font-weight: 300;
+}
+
+p a {
+  color: var(--white);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+p a:hover {
+  color: var(--pink);
+}
+
+.logo-white {
+  display: block;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0 0 0;
+  font-family: NeueMontreal, sans-serif;
+  color: var(--white);
+  font-weight: 300;
+}
+
+.footer-links a {
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.footer-links a:hover {
+  color: var(--pink);
+}
+
+@media only screen and (min-width: 500px) {  
+
+  .logo-text {
+    font-size: 2.2rem;
+  }
+
+  .logo-image {
+    height: 100px;
+    width: 100px;
+  }
+
+  .sq-text {
+    padding: 0 20px;
+  }
+
+  .hamburger {
+    top: 34.5px;
+    right: 34.5px;
+  }
+
+  .menu {
+  left: 6rem;
+  }
+
+  .links {
+    left: 8rem;
+  }
+
+}
+
+@media only screen and (min-width: 650px) {
+  
+    .logo-container {
+      padding-left: 0.5rem;
+      gap: 0.5rem;
+    }
+
+    .sq-text {
+      padding: 0 24px;
+    }
+
+    .list-container {
+      grid-template-columns: 8fr 1fr 8fr;
+    }
+
+    .list-left {
+      grid-column: 1 / 2;
+    }
+
+    .vertical-line {
+      display: block;
+      grid-column: 2 / 3;
+    }
+
+    .list-right {
+      grid-column: 3 / 4;
+    }
+
+    .horizontal-menu {
+      display: flex;
+      list-style: none;
+      align-items: center;
+      column-gap: 2rem;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+}
+
+@media only screen and (min-width: 952px) {
+
+  .main-container {
+    width: 952px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .about-container {
+    width: 952px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 8rem;
+  }
+
+  .sq-text {
+    padding: 0 30px;
+  }
+
+  .sq-text h2 {
+    font-size: 1.8rem;
+    padding-top: 15px;
+  }
+
+  .sq-text h3 {
+    font-size: 1rem;
+  } 
+
 }
