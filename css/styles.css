@@ -435,6 +435,10 @@ p a:hover {
     width: 100px;
   }
 
+  .about-container {
+    margin-top: 8rem;
+  }
+
   .sq-text {
     padding: 0 20px;
   }
@@ -454,7 +458,7 @@ p a:hover {
 
 }
 
-@media only screen and (min-width: 650px) {
+@media only screen and (min-width: 700px) {
   
     .logo-container {
       padding-left: 0.5rem;
@@ -468,6 +472,12 @@ p a:hover {
     .list-container {
       grid-template-columns: 8fr 1fr 8fr;
     }
+
+  .about-container {
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
     .list-left {
       grid-column: 1 / 2;
@@ -505,9 +515,6 @@ p a:hover {
 
   .about-container {
     width: 952px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 8rem;
   }
 
   .sq-text {
