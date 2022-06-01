@@ -452,6 +452,14 @@ p a:hover {
     right: 34.5px;
   }
 
+  .add {
+    margin-right: 12px;
+  }
+
+  .remove {
+    margin-right: 12px;
+  }
+
   .menu {
   left: 6rem;
   }
