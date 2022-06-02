@@ -124,6 +124,13 @@ h1 {
   transition: 0.3s;
 }
 
+.menu-pipe {
+  font-family: NeueMontreal, sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: var(--white);
+}
+
 .menu-link:hover {
   color: var(--pink);
 }
