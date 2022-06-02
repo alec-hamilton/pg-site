@@ -49,7 +49,10 @@ hr {
 
 h1 {
   padding: 0;
-  margin: 1.2rem 0.4rem;
+  margin: 1.2rem 0.4rem 0 0.4rem;
+  font-family: NeueMontreal, sans-serif;
+  color: var(--white);
+  font-weight: 500;
 }
 
 .top-container {
@@ -88,6 +91,7 @@ h1 {
 }
 
 .menu {
+  visibility: hidden;
   transform: translateX(100%);
   transition: 0.2s;
   list-style: none;
@@ -104,6 +108,7 @@ h1 {
 .show-menu {
   transform: translateX(0);
   z-index: 5;
+  visibility: visible;
 }
 
 .menu > li {
@@ -178,6 +183,7 @@ h1 {
 }
 
 .links {
+  visibility: hidden;
   transform: translateX(105%);
   transition: 0.3s;
   z-index: 101;
@@ -195,6 +201,7 @@ h1 {
 
 .show-links {
   transform: translateX(0);
+  visibility: visible;
 }
 
 .links-dropdown {
@@ -228,12 +235,22 @@ h1 {
   padding: 1rem;
 }
 
+.episode-number {
+  width: 2rem;
+  text-align: end;
+}
+
+td {
+  padding: 0;
+}
+
 .episode-list {
   font-family: NeueMontreal, sans-serif;
   font-weight: 300;
   color: var(--white);
   text-decoration: underline;
   transition: 0.3s;
+  margin-left: 1rem;
 }
 
 .episode-list:hover {
@@ -247,10 +264,9 @@ h1 {
   display: none;
 }
 
-h1 {
-  font-family: NeueMontreal, sans-serif;
-  color: var(--white);
-  font-weight: 500;
+.artist-line {
+  margin-top: 0;
+  margin-left: 0.4rem;
 }
 
 .img-sq {
@@ -448,6 +464,14 @@ p a:hover {
     right: 34.5px;
   }
 
+  .add {
+    margin-right: 12px;
+  }
+
+  .remove {
+    margin-right: 12px;
+  }
+
   .menu {
   left: 6rem;
   }
@@ -502,6 +526,14 @@ p a:hover {
     .hamburger {
       display: none;
     }
+
+  .list-right .episode-number {
+    text-align: end;
+  }
+
+  .list-left .episode-number {
+    width: 1rem;
+  }
 
 }
 
