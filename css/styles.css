@@ -235,12 +235,22 @@ h1 {
   padding: 1rem;
 }
 
+.episode-number {
+  width: 2rem;
+  text-align: end;
+}
+
+td {
+  padding: 0;
+}
+
 .episode-list {
   font-family: NeueMontreal, sans-serif;
   font-weight: 300;
   color: var(--white);
   text-decoration: underline;
   transition: 0.3s;
+  margin-left: 1rem;
 }
 
 .episode-list:hover {
@@ -516,6 +526,14 @@ p a:hover {
     .hamburger {
       display: none;
     }
+
+  .list-right .episode-number {
+    text-align: end;
+  }
+
+  .list-left .episode-number {
+    width: 1rem;
+  }
 
 }
 
