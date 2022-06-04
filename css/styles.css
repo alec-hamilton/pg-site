@@ -23,6 +23,11 @@
   --pink: #ff8fa0;
 }
 
+:focus-visible {
+  outline: solid 2px var(--white);
+  border-radius: 0;
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
@@ -122,6 +127,14 @@ h1 {
   color: var(--white);
   text-decoration: none;
   transition: 0.3s;
+  transition-property: color;
+}
+
+.menu-pipe {
+  font-family: NeueMontreal, sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: var(--white);
 }
 
 .menu-link:hover {
@@ -250,6 +263,7 @@ td {
   color: var(--white);
   text-decoration: underline;
   transition: 0.3s;
+  transition-property: color;
   margin-left: 1rem;
 }
 
@@ -274,7 +288,7 @@ td {
 }
 
 .sq-text {
-  padding: 0 10px;
+  padding: 0 0.625rem;
   background-color: var(--overlay);
   z-index: 10;
   height: 100%;
@@ -409,6 +423,7 @@ p a {
   color: var(--white);
   text-decoration: underline;
   transition: 0.3s;
+  transition-property: color;
 }
 
 p a:hover {
@@ -416,9 +431,15 @@ p a:hover {
 }
 
 .logo-white {
-  display: block;
+  /*display: block;*/
+
   width: 100px;
   margin: 0 auto;
+}
+
+.footer-logo {
+  display: flex;
+  justify-content: center;
 }
 
 .footer-links {
@@ -434,6 +455,7 @@ p a:hover {
 .footer-links a {
   color: var(--white);
   transition: 0.3s;
+  transition-property: color;
 }
 
 .footer-links a:hover {
@@ -456,12 +478,12 @@ p a:hover {
   }
 
   .sq-text {
-    padding: 0 20px;
+    padding: 0 1.25rem;
   }
 
   .hamburger {
-    top: 34.5px;
-    right: 34.5px;
+    top: 35px;
+    right: 35px;
   }
 
   .add {
@@ -490,7 +512,7 @@ p a:hover {
     }
 
     .sq-text {
-      padding: 0 24px;
+      padding: 0 1.5rem;
     }
 
     .list-container {
@@ -550,12 +572,12 @@ p a:hover {
   }
 
   .sq-text {
-    padding: 0 30px;
+    padding: 0 1.875rem;
   }
 
   .sq-text h2 {
     font-size: 1.8rem;
-    padding-top: 15px;
+    padding-top: 1rem;
   }
 
   .sq-text h3 {
