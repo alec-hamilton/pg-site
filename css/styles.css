@@ -1,18 +1,18 @@
 @font-face {
   font-family: 'NeueMontreal';
-  src: url('fonts/NeueMontreal.otf');
+  src: url('../fonts/NeueMontreal-Regular.otf');
   font-weight: 500;
 }
 
 @font-face {
   font-family: 'NeueMontreal';
-  src: url('fonts/NeueMontreal-Bold.otf');
+  src: url('../fonts/NeueMontreal-Bold.otf');
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'NeueMontreal';
-  src: url('fonts/NeueMontreal-Light.otf');
+  src: url('../fonts/NeueMontreal-Light.otf');
   font-weight: 300;
 }
 
@@ -48,7 +48,7 @@ a {
 }
 
 hr {
-  border-top: 0px solid var(--white);
+  border-top: 0 solid var(--white);
   width: 100%;
 }
 
@@ -61,7 +61,7 @@ h1 {
 }
 
 .top-container {
-  margin-top: 95.2px;
+  margin-top: 95px;
 }
 
 .top-nav {
@@ -82,7 +82,7 @@ h1 {
 .logo-text {
   font-family: NeueMontreal, sans-serif;
   font-size: 1.8rem;
-  font-weight: 400;
+  font-weight: 500;
   color: var(--white);
   line-height: 1;
 }
@@ -122,7 +122,7 @@ h1 {
 
 .menu-link {
   font-family: NeueMontreal, sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.6rem;
   color: var(--white);
   text-decoration: none;
@@ -132,7 +132,7 @@ h1 {
 
 .menu-pipe {
   font-family: NeueMontreal, sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   font-size: 1.6rem;
   color: var(--white);
 }
@@ -238,7 +238,7 @@ h1 {
   padding-left: 0;
   font-family: NeueMontreal, sans-serif;
   color: var(--white);
-  font-weight: 300;
+  font-weight: 500;
   margin: 0;
 }
 
@@ -259,7 +259,7 @@ td {
 
 .episode-list {
   font-family: NeueMontreal, sans-serif;
-  font-weight: 300;
+  font-weight: 500;
   color: var(--white);
   text-decoration: underline;
   transition: 0.3s;
@@ -281,6 +281,7 @@ td {
 .artist-line {
   margin-top: 0;
   margin-left: 0.4rem;
+  font-weight: 300;
 }
 
 .img-sq {
@@ -416,7 +417,7 @@ td {
 p {
   font-family: NeueMontreal, sans-serif;
   color: var(--white);
-  font-weight: 300;
+  font-weight: 500;
 }
 
 p a {
@@ -431,8 +432,6 @@ p a:hover {
 }
 
 .logo-white {
-  /*display: block;*/
-
   width: 100px;
   margin: 0 auto;
 }
@@ -449,7 +448,7 @@ p a:hover {
   padding: 2rem 0 0 0;
   font-family: NeueMontreal, sans-serif;
   color: var(--white);
-  font-weight: 300;
+  font-weight: 500;
 }
 
 .footer-links a {
