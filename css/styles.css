@@ -505,18 +505,18 @@ p a:hover {
 
 @media only screen and (min-width: 700px) {
   
-    .logo-container {
-      padding-left: 0.5rem;
-      gap: 0.5rem;
-    }
+  .logo-container {
+    padding-left: 0.5rem;
+    gap: 0.5rem;
+  }
 
-    .sq-text {
-      padding: 0 1.5rem;
-    }
+  .sq-text {
+    padding: 0 1.5rem;
+  }
 
-    .list-container {
-      grid-template-columns: 8fr 1fr 8fr;
-    }
+  .list-container {
+    grid-template-columns: 8fr 1fr 8fr;
+  }
 
   .about-container {
     width: 700px;
@@ -524,29 +524,29 @@ p a:hover {
     margin-right: auto;
   }
 
-    .list-left {
-      grid-column: 1 / 2;
-    }
+  .list-left {
+    grid-column: 1 / 2;
+  }
 
-    .vertical-line {
-      display: block;
-      grid-column: 2 / 3;
-    }
+  .vertical-line {
+    display: block;
+    grid-column: 2 / 3;
+  }
 
-    .list-right {
-      grid-column: 3 / 4;
-    }
+  .list-right {
+    grid-column: 3 / 4;
+  }
 
-    .horizontal-menu {
-      display: flex;
-      list-style: none;
-      align-items: center;
-      column-gap: 2rem;
-    }
+  .horizontal-menu {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    column-gap: 2rem;
+  }
 
-    .hamburger {
-      display: none;
-    }
+  .hamburger {
+    display: none;
+  }
 
   .list-right .episode-number {
     text-align: end;
