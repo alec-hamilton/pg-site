@@ -245,7 +245,7 @@ h1 {
 .list-container {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
 }
 
 .episode-number {
@@ -445,7 +445,7 @@ p a:hover {
   list-style: none;
   display: flex;
   justify-content: center;
-  padding: 2rem 0 0 0;
+  padding: 0;
   font-family: NeueMontreal, sans-serif;
   color: var(--white);
   font-weight: 500;
@@ -459,6 +459,16 @@ p a:hover {
 
 .footer-links a:hover {
   color: var(--pink);
+}
+
+.footer-line {
+  text-align: center;
+}
+
+.footer-line a {
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 0.75rem;
 }
 
 @media only screen and (min-width: 500px) {  
@@ -516,6 +526,7 @@ p a:hover {
 
   .list-container {
     grid-template-columns: 8fr 1fr 8fr;
+    padding: 1rem;
   }
 
   .about-container {
