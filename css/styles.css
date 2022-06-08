@@ -245,7 +245,7 @@ h1 {
 .list-container {
   display: grid;
   grid-template-columns: 1fr;
-  padding: 1rem;
+  padding: 1rem 1rem 1rem 0;
 }
 
 .episode-number {
@@ -516,6 +516,7 @@ p a:hover {
 
   .list-container {
     grid-template-columns: 8fr 1fr 8fr;
+    padding: 1rem;
   }
 
   .about-container {
