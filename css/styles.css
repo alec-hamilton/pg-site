@@ -284,6 +284,10 @@ td {
   font-weight: 300;
 }
 
+.artist-line a {
+  text-decoration: none;
+}
+
 .img-sq {
   aspect-ratio: 1;
 }
